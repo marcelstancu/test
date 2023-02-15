@@ -7,15 +7,11 @@ pipeline {
       }
     }
 
-    stage('Shell Script') {
+    stage('Import proxy') {
       steps {
-        sh 'ls -la'
-      }
-    }
-
-    stage('Install Golang') {
-      steps {
-        sh 'wget https://go.dev/dl/go1.19.6.linux-amd64.tar.gz && ls -la'
+        sh '''export http_proxy=http://proxy-dmz.intel.com:912 &&
+export https_proxy=http://proxy-dmz.intel.com:912
+'''
       }
     }
 

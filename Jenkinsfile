@@ -15,8 +15,7 @@ pipeline {
 
     stage('Install Golang') {
       steps {
-        sh '''wget https://go.dev/dl/go1.19.6.linux-amd64.tar.gz
-ls -la'''
+        sh 'wget https://go.dev/dl/go1.19.6.linux-amd64.tar.gz && ls -la'
       }
     }
 

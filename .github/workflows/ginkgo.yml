@@ -27,7 +27,7 @@ jobs:
         
       - name: Install git
         run: |
-          apt-get install git -y
+          sudo apt-get install git -y
           git version
         shell: bash
         

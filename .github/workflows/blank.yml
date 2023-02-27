@@ -23,5 +23,4 @@ jobs:
           username: ${{ secrets.USERRKE2 }}
           password: ${{ secrets.PASSRKE2 }}
           port: ${{ secrets.PORTRKE2 }}
-          script: ls -la
-
+          script: whoami

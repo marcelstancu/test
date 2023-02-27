@@ -17,17 +17,11 @@ jobs:
       - uses: actions/checkout@v3
       
       - name: SSH Command
-        # You may pin to the exact commit or the version.
-        # uses: D3rHase/ssh-command-action@51ec3cec93e9557d7a5289c1e31a4a28185e5200
-        uses: D3rHase/ssh-command-action@v0.2.2
+        uses: appleboy/ssh-action@v0.1.7
         with:
-          # hostname / IP of the server
-          host: ${{ secrets.HOSTRKE2 }} 
-          # user of the server
-          user: ${{ secrets.USERRKE2 }}
-          # private ssh key registered on the server
-          private_key: ${{ secrets.PRIVATE_KEY_RKE2 }}
+          host: ${{ secrets.HOSTRKE2 }}
+          username: ${{ secrets.USERRKE2 }}
+          password: ${{ secrets.PASSRKE2 }}
           port: ${{ secrets.PORTRKE2 }}
-          # command to be executed
-          command: ls -la
+          script: ls -la
 

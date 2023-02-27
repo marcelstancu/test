@@ -32,7 +32,11 @@ jobs:
         shell: bash
         
       - name: Clone validation folder
-        run: git clone https://github.com/marcelstancu/infrastructure.csl-clusters.testenv/tree/main/validation
+        run: git clone https://github.com/marcelstancu/infrastructure.csl-clusters.testenv
+        shell: bash
+        
+      - name: Print Home path
+        run: ls -la
         shell: bash
       
       - name: Install ginkgo

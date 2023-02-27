@@ -33,7 +33,7 @@ jobs:
         shell: bash
         
       - name: Clone validation folder
-        run: git clone https://github.com/marcelstancu/infrastructure.csl-clusters.testenv
+        run: git clone https://github.com/yankils/hello-world.git
         shell: bash
         
       - name: Print Home path

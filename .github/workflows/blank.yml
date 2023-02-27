@@ -29,5 +29,5 @@ jobs:
           private_key: ${{ secrets.PRIVATE_KEY_RKE2 }}
           port: ${{ secrets.PORTRKE2 }}
           # command to be executed
-          command: whoami
+          command: ls
 

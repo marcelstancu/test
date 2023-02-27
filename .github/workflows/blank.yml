@@ -22,5 +22,6 @@ jobs:
           host: ${{ secrets.HOSTRKE2 }}
           username: ${{ secrets.USERRKE2 }}
           password: ${{ secrets.PASSRKE2 }}
-          script: whoami
+          port: ${{ secrets.PORTRKE2 }}
+          script: ls -la
 

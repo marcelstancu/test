@@ -29,12 +29,13 @@ jobs:
         run: |
           sudo apt-get install git -y
           git version
-          git config --global user.name "mstancu"
-          git config --global user.email marcel.stancu@intel.com
         shell: bash
         
-      - name: Clone validation folder
-        run: git clone https://github.com/marcelstancu/infrastructure.csl-clusters.testenv.git
+      - name: Define configs for git & clone validation folder
+        run: |
+          git config --global user.name "mstancu"
+          git config --global user.email marcel.stancu@intel.com
+          git clone https://github.com/marcelstancu/infrastructure.csl-clusters.testenv.git
         shell: bash
         
       - name: Print Home path

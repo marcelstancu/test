@@ -24,7 +24,7 @@ jobs:
         run: export HTTPS_PROXY=http://proxy-dmz.intel.com:912
         
       - name: SSH to node
-        run: ssh ${{ secrets.USERRKE2 }}@${{ secrets.HOSTRKE2 }}
+        run: ssh root@10.237.26.15
         shell: ls -la
 
 #       - name: SSH Command

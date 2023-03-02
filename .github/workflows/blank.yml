@@ -16,11 +16,31 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       
-      - name: Setup SSH
-        uses: kielabokkie/ssh-key-and-known-hosts-action@v1.3.5
+      - name: ssh-socks-action
+        # You may pin to the exact commit or the version.
+        # uses: Ayouuuu/ssh-socks-action@e7ffffbf93339ecd9f2eb9cf50597d02b3377422
+        uses: Ayouuuu/ssh-socks-action@v1.0
         with:
-          ssh-private-key: ${{ secrets.PRIVATE_KEY_RKE2 }}
-          ssh-host: ${{ secrets.HOSTRKE2 }}
+          # username
+          proxy_username: mstancu
+          # your server host or ip address
+          proxy_server: proxy-dmz.intel.com
+          # server port
+          proxy_port: 912
+          # ssh username
+          username: ${{ secrets.USERRKE2 }}
+          # ssh host or ip address
+          host: ${{ secrets.HOSTRKE2 }}
+          port: 22
+          password: ${{ secrets.PASSRKE2 }}
+          # commands to run
+          run: ls
+      
+#       - name: Setup SSH
+#         uses: kielabokkie/ssh-key-and-known-hosts-action@v1.3.5
+#         with:
+#           ssh-private-key: ${{ secrets.PRIVATE_KEY_RKE2 }}
+#           ssh-host: ${{ secrets.HOSTRKE2 }}
 
 #       - name: SSH Command
 #         uses: appleboy/ssh-action@v0.1.7

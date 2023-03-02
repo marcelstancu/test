@@ -23,4 +23,7 @@ jobs:
           username: ${{ secrets.USERRKE2 }}
           password: ${{ secrets.PASSRKE2 }}
           port: ${{ secrets.PORTRKE2 }}
-          script: ls -la
+          script: |
+            export HTTP_PROXY=http://proxy-dmz.intel.com:912
+            export HTTPS_PROXY=http://proxy-dmz.intel.com:912
+            ls -la

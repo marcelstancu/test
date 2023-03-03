@@ -19,5 +19,5 @@ jobs:
         
       - name: SSH to node
         run: |
-          sshpass root ssh root@10.237.26.15
+          sshpass -p root ssh root@10.237.26.15
           whoami

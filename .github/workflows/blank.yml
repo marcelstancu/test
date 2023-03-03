@@ -14,9 +14,12 @@ jobs:
     runs-on: [self-hosted]
 
     steps:
-      - name: Update system
-        run: sudo apt-get -y update
-        
-      - name: SSH to node
+      - name: Play ansible-playbook
         run: |
-          sshpass -p root ssh root@10.237.26.15 && whoami
+          cd /home/mstancu/gitActionsAnsible
+          ls -la
+          ansible-playbook tests.yml
+        
+#       - name: SSH to node
+#         run: |
+#           sshpass -p root ssh root@10.237.26.15 && whoami

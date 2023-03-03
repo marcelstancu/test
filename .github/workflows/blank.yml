@@ -19,4 +19,6 @@ jobs:
         
       - name: SSH to node
         run: ssh root@10.237.26.15
-        shell: ls -la
+
+      - name: Echo user
+        run: whoami

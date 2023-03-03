@@ -18,7 +18,6 @@ jobs:
         run: sudo apt-get -y update
         
       - name: SSH to node
-        run: ssh root@10.237.26.15
-
-      - name: Echo user
-        run: whoami
+        run: |
+          sshpass root ssh root@10.237.26.15
+          whoami

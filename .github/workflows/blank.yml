@@ -15,23 +15,8 @@ jobs:
 
     steps:
       - name: Update system
-        run: apt-get -y update
-        
-      - name: Set http proxy
-        run: export HTTP_PROXY=http://proxy-dmz.intel.com:912
-      
-      - name: Set https proxy
-        run: export HTTPS_PROXY=http://proxy-dmz.intel.com:912
+        run: sudo apt-get -y update
         
       - name: SSH to node
         run: ssh root@10.237.26.15
         shell: ls -la
-
-#       - name: SSH Command
-#         uses: appleboy/ssh-action@v0.1.7
-#         with:
-#           host: ${{ secrets.HOSTRKE2 }}
-#           username: ${{ secrets.USERRKE2 }}
-#           password: ${{ secrets.PASSRKE2 }}
-#           port: ${{ secrets.PORTRKE2 }}
-#           script: ls -la
